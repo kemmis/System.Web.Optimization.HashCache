@@ -27,6 +27,24 @@ myBundle.Transforms.Add(new HashCacheTransform());
 
 ## Options
 
-* Add cache-busting content hash to the unbundled file paths output by Scripts.Render() and Styles.Render() calls.
-* Disable caching bundle output in the HttpContext.Cache
-* Set the Cache-Control HTTP header to tell browser not to cache bundle contents.
+* **AddHashToPath:** Add cache-busting content hash to the unbundled file paths output by Scripts.Render() and Styles.Render() calls.
+* **HttpCacheability:** Disable caching bundle output in the HttpContext.Cache
+* **UseServerCache:** Set the Cache-Control HTTP header to tell browser not to cache bundle contents.
+
+## Applying Options
+
+The above options can either be passed into the ApplyHacheCache() extension method call
+or set on individual instances of the HashCachTransform class.
+
+```cs
+bundles.ApplyHashCache(true, false, HttpCacheability.NoCache);)
+```
+
+```cs
+var hashCacheTransform = new HashCacheTransform
+{
+    AddHashToPath = true,
+    HttpCacheability = HttpCacheability.NoCache,
+    UseServerCache = false
+};
+```
