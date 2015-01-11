@@ -8,7 +8,8 @@ are disabled - when debug is enabled or BundleTable.EnableOptimizations is false
 
 ### You can apply HashCache to all bundles in a BundlesCollection
 
-Execute the ApplyHashCache() extension method on the BundlesCollection Instance after all bundles have been added to the collection. 
+Execute the ApplyHashCache() extension method on the BundlesCollection Instance 
+**after all bundles have been added to the collection**. 
 
 ```cs
 BundleTable.Bundles.ApplyHashCache();
