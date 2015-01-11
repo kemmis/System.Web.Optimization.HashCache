@@ -15,6 +15,11 @@ namespace System.Web.Optimization.HashCache
 
         public void Process(BundleContext context, BundleResponse response)
         {
+            if (BundleTable.EnableOptimizations)
+            {
+                return;
+            }
+
             context.UseServerCache = UseServerCache;
             response.Cacheability = HttpCacheability;
             response.AddHashToResponsePath();

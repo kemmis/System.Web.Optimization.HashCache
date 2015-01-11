@@ -12,11 +12,6 @@ namespace System.Web.Optimization.HashCache
         public static BundleCollection ApplyHashCache(this BundleCollection bundleCollection, bool addHashToPath = true,
            bool useServerCache = false, HttpCacheability httpCacheability = HttpCacheability.NoCache)
         {
-            if (BundleTable.EnableOptimizations)
-            {
-                return bundleCollection;
-            }
-
             var transform = new HashCacheTransform()
             {
                 AddHashToPath = addHashToPath,
