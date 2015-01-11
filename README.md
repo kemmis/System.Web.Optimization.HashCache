@@ -10,7 +10,9 @@ are disabled - when debug is enabled or BundleTable.EnableOptimizations is false
 
 Execute the ApplyHashCache() extension method on the BundlesCollection Instance after all bundles have been added to the collection. 
 
+```cs
 BundleTable.Bundles.ApplyHashCache();
+```
 
 ### Or you can apply HashCache to a single Bundle
 
