@@ -17,10 +17,10 @@ BundleTable.Bundles.ApplyHashCache();
 Create an instance of the HashCacheTransform and add it to the bundle instance you want 
 to apply HashCache to.
 
-'''c#
+```cs
 var myBundle = new ScriptBundle("~/bundle_virtual_path").Include("~/scripts/jsfile.js");
 myBundle.Transforms.Add(new HashCacheTransform());
-'''
+```
 
 ## Options
 
