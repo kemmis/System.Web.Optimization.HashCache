@@ -1,0 +1,1 @@
+# System.Web.Optimization.HashCache
