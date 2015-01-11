@@ -4,6 +4,8 @@
 A helper bundle transform which prevents caching of bundle contents when optimizations 
 are disabled - when debug is enabled or BundleTable.EnableOptimizations is false.
 
+**NuGet package coming soon!!**
+
 ## Usage
 
 ### You can apply HashCache to all bundles in a BundlesCollection
