@@ -10,7 +10,9 @@ are disabled - when debug is enabled or BundleTable.EnableOptimizations is false
 
 ## Elevator Speech
 
-This transform prevents browsers from loading old cached versions of your code when you are running in debug mode.
+This transform prevents browsers from loading old cached versions of your 
+code when you are running in debug mode, by adding a hash of the file content
+to the end of the file path:
 
 ```
 <link href="/css/styles.css?~v=Iz7DDyL6DCDnT_L414h7aec4VUNOlN9dDYVRGoD2ZB01" rel="stylesheet"/><script src="/js/app.js?~v=QWNK55__txkMIVFvtdF3fy5lDLK7GLkwLzP8nzCV6nw1"></script>
