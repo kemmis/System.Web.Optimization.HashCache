@@ -66,6 +66,7 @@
     <Compile Include="BundleCollectionExtensions.cs" />
     <Compile Include="BundleFileExtensions.cs" />
     <Compile Include="BundleResponseExtensions.cs" />
+    <Compile Include="Defaults.cs" />
     <Compile Include="ContentHasher.cs" />
     <Compile Include="HashCacheTransform.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

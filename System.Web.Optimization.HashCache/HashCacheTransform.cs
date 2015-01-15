@@ -10,6 +10,7 @@ namespace System.Web.Optimization.HashCache
     public class HashCacheTransform : IBundleTransform
     {
         public bool AddHashToPath { get; set; }
+        public string HashPathParameterName { get; set; }
         public bool UseServerCache { get; set; }
         public HttpCacheability HttpCacheability { get; set; }
 
@@ -19,10 +20,10 @@ namespace System.Web.Optimization.HashCache
             {
                 return;
             }
-
+            
             context.UseServerCache = UseServerCache;
             response.Cacheability = HttpCacheability;
-            response.AddHashToResponsePath();
+            response.AddHashToResponsePath(HashPathParameterName);
         }
     }
 }

@@ -9,13 +9,11 @@ namespace System.Web.Optimization.HashCache
 {
     internal static class BundleResponseExtensions
     {
-        private const string VersionQueryString = "v";
-
-        internal static BundleResponse AddHashToResponsePath(this BundleResponse bundleResponse)
+        internal static BundleResponse AddHashToResponsePath(this BundleResponse bundleResponse, string hashPathParameterName = null)
         {
             bundleResponse.Files.ForEach(file =>
             {
-                file.IncludedVirtualPath += "?" + VersionQueryString + "=" + file.GetContentHashCode();
+                file.IncludedVirtualPath += "?" + (hashPathParameterName ?? Defaults.HashPathParameterName) + "=" + file.GetContentHashCode();
             });
             return bundleResponse;
         }
