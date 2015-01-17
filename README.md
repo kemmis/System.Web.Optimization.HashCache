@@ -1,6 +1,6 @@
 # System.Web.Optimization.HashCache
 
-<img src="https://ci.appveyor.com/api/projects/status/e0xqdpo0078xd94w/branch/master?svg=true&passingText=build%20status%20-%20awesomesauce" style="width:728px;" />
+<img src="https://ci.appveyor.com/api/projects/status/e0xqdpo0078xd94w/branch/master?svg=true&passingText=build%20status%20-%20awesomesauce" width="100%" />
 
 A helper bundle transform which prevents caching of bundle contents when optimizations 
 are disabled - when debug is enabled or BundleTable.EnableOptimizations is false.
